@@ -1,5 +1,5 @@
 {
-  "name": "@xfp/ai-init",
+  "name": "@finleywdx/ai-init",
   "version": "0.1.0",
   "description": "AI 工程化工作流初始化器：一条命令把 spec-kit 工作流 + 记忆层 + 质量门禁铺进你的新项目。",
   "keywords": [

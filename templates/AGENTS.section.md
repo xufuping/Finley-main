@@ -1,7 +1,7 @@
 <!-- FINLEY:START -->
 # Finley 工作流（AI 工程化）
 
-本项目由 [`@xfp/ai-init`](https://www.npmjs.com/package/@xfp/ai-init) 初始化，采用一套「spec-kit 规范驱动开发 + 质量门禁 + 跨会话记忆」的工作流。AI 助手在本项目工作时**必须遵循**下面的整体流程。
+本项目由 [`@finleywdx/ai-init`](https://www.npmjs.com/package/@finleywdx/ai-init) 初始化，采用一套「spec-kit 规范驱动开发 + 质量门禁 + 跨会话记忆」的工作流。AI 助手在本项目工作时**必须遵循**下面的整体流程。
 
 ## 整体流程
 

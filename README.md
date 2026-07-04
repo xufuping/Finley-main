@@ -1,8 +1,8 @@
-# @xfp/ai-init
+# @finleywdx/ai-init
 
 > AI 工程化工作流初始化器 —— 一条命令，把「spec-kit 规范驱动开发 + 跨会话记忆层 + 质量门禁」铺进你的新项目。
 
-`@xfp/ai-init` 提供命令行工具 `ai-init`。在你的新项目（如 Next.js）里运行它，它会：
+`@finleywdx/ai-init` 提供命令行工具 `ai-init`。在你的新项目（如 Next.js）里运行它，它会：
 
 1. **编排 [spec-kit](https://github.com/github/spec-kit)**：为 5 个主流 AI 编码 agent（Cursor、Claude、Codex、Gemini、Copilot）一次性安装 `/speckit.*` 系列命令，把「规范 → 计划 → 任务 → 实现」的规范驱动开发（SDD）流程带进项目。
 2. **铺设 Finley 增量层**：一套轻量的 `.finley/` 质量门禁 + 记忆脚本（纯 Python 标准库实现，无第三方依赖）。
@@ -39,19 +39,19 @@ uv tool install specify-cli --from git+https://github.com/github/spec-kit.git@<t
 在你的项目里作为开发依赖安装：
 
 ```bash
-npm i -D @xfp/ai-init
+npm i -D @finleywdx/ai-init
 ```
 
 或全局安装：
 
 ```bash
-npm i -g @xfp/ai-init
+npm i -g @finleywdx/ai-init
 ```
 
 也可以免安装直接用 npx：
 
 ```bash
-npx @xfp/ai-init init
+npx @finleywdx/ai-init init
 ```
 
 ## 用法
@@ -150,7 +150,7 @@ journal:
 
 ## 发布这个包到 npm（维护者向）
 
-本仓库是 `@xfp/ai-init` 的源码。发布步骤：
+本仓库是 `@finleywdx/ai-init` 的源码。发布步骤：
 
 ```bash
 # 1. 安装依赖
@@ -181,7 +181,7 @@ npm publish --access public
 npm run build
 npm link              # 在本仓库
 # 到另一个测试项目里：
-npm link @xfp/ai-init
+npm link @finleywdx/ai-init
 ai-init init --dry-run
 ```
 
