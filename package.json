@@ -1,0 +1,52 @@
+{
+  "name": "@xfp/ai-init",
+  "version": "0.1.0",
+  "description": "AI 工程化工作流初始化器：一条命令把 spec-kit 工作流 + 记忆层 + 质量门禁铺进你的新项目。",
+  "keywords": [
+    "ai",
+    "spec-kit",
+    "spec-driven-development",
+    "scaffold",
+    "cli",
+    "workflow",
+    "quality-gate"
+  ],
+  "type": "module",
+  "bin": {
+    "ai-init": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "execa": "^9.6.1",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

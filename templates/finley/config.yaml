@@ -1,0 +1,51 @@
+# Finley 配置文件
+# ---------------------------------------------------------------------------
+# 这是 @xfp/ai-init 铺进项目的「增量层」配置。
+# 它只负责两件事：质量门禁命令映射（gate.py 读）、记忆 journal 设置（add_session.py 读）。
+# spec-kit 自身的配置在 .specify/ 目录，与本文件互不干扰。
+
+# ---------------------------------------------------------------------------
+# quality —— 质量门禁命令映射
+# ---------------------------------------------------------------------------
+# gate.py 会按下面的命令逐条执行；任一失败则整体门禁失败（非零退出）。
+#
+# 占位说明：值形如 "<占位: ...>" 表示尚未配置。gate.py 遇到占位会尝试
+# 自动探测：
+#   - 前端（frontend）从目标项目的 package.json 的 scripts 里找
+#     lint / typecheck(或 type-check) / test。
+#   - 后端（backend）从 pyproject.toml 里探测工具链：
+#     检测到 ruff  -> `ruff check .`
+#     检测到 mypy  -> `mypy .`
+#     检测到 pytest -> `pytest`
+#
+# 你可以随时把占位替换成项目里真实的命令，例如：
+#   frontend:
+#     lint: "npm run lint"
+#     typecheck: "npm run typecheck"
+#     test: "npm test"
+quality:
+  # 前端 / Node 侧命令
+  frontend:
+    lint: "<占位: 前端 lint 命令，如 npm run lint>"
+    typecheck: "<占位: 前端类型检查命令，如 npm run typecheck>"
+    test: "<占位: 前端测试命令，如 npm test>"
+  # 后端 / Python 侧命令
+  backend:
+    lint: "<占位: 后端 lint 命令，如 ruff check .>"
+    typecheck: "<占位: 后端类型检查命令，如 mypy .>"
+    test: "<占位: 后端测试命令，如 pytest>"
+
+# ---------------------------------------------------------------------------
+# developer —— 开发者标识
+# ---------------------------------------------------------------------------
+# journal 会写到 .finley/workspace/<developer>/ 下。
+# 留空时 add_session.py 自动探测：
+#   环境变量 FINLEY_DEVELOPER > git config user.name > 系统用户名
+developer: ""
+
+# ---------------------------------------------------------------------------
+# journal —— 记忆层设置
+# ---------------------------------------------------------------------------
+journal:
+  # 单个 journal 文件超过该行数后，自动轮转到下一个 journal-N.md
+  max_lines: 2000

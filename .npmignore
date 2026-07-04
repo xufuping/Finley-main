@@ -1,0 +1,5 @@
+# 使用 package.json 的 "files" 白名单发布，这里仅作为兜底忽略源码与配置
+src/
+tsconfig.json
+tsup.config.ts
+.gitignore
