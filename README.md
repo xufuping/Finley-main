@@ -68,7 +68,7 @@ ai-init init
 
 ```bash
 # 只安装指定的 spec-kit integration（逗号分隔）
-ai-init init --integration cursor,claude
+ai-init init --integration cursor-agent,claude
 
 # 跳过 spec-kit 编排，只铺设 Finley 增量层
 ai-init init --skip-speckit

@@ -5,7 +5,7 @@ import pc from "picocolors";
 
 /** 一次为这些 agent 安装 spec-kit 命令。 */
 export const DEFAULT_INTEGRATIONS = [
-  "cursor",
+  "cursor-agent",
   "claude",
   "codex",
   "gemini",

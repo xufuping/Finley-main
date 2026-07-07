@@ -19,7 +19,7 @@ function main(): void {
     .description("在当前目录初始化 Finley 工作流（编排 spec-kit + 铺设增量层 + 合并 AGENTS.md）")
     .option(
       "-i, --integration <names>",
-      "以逗号分隔指定要安装的 spec-kit integration（默认 cursor,claude,codex,gemini,copilot）",
+      "以逗号分隔指定要安装的 spec-kit integration（默认 cursor-agent,claude,codex,gemini,copilot）",
     )
     .option("--skip-speckit", "跳过 spec-kit 编排，仅铺设 Finley 增量层")
     .option("--no-ignore-agent-tools", "不向 specify 传 --ignore-agent-tools（默认会传）")
